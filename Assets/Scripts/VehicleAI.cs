@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,15 +17,12 @@ public class VehicleAI : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		print("Collided with object " + other.name);
 		if (other.CompareTag("RoadLink"))
 		{
-			print("RoadLink found");
 			Vector3? newDestination = other.GetComponent<RoadLink>().GetRandomRoadOutPoint();
 
 			if (newDestination.HasValue)
 			{
-				print("new destination has valid value");
 				_agent.destination = newDestination.Value;
 			}
 		}

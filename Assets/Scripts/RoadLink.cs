@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -23,5 +22,8 @@ public class RoadLink : MonoBehaviour
 	{
 		if (_showColliders)
 			Gizmos.DrawWireCube(transform.position, new Vector3(3.5f, 7.5f, 3.5f));
+		
+		Gizmos.color = Color.green;
+		Gizmos.DrawWireSphere(transform.position, 0.25f);
 	}
 }

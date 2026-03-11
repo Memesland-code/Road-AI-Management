@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 1
+  _showColliders: 0
   _roadOutPath:
   - {fileID: 4340521892498132532}
 --- !u!1 &2414102141926197893
@@ -579,7 +579,7 @@ Transform:
   m_GameObject: {fileID: 3325848032048494962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.63, y: 0.10048808, z: -9.905}
+  m_LocalPosition: {x: -3.63, y: 0, z: -9.905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -685,7 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 1
+  _showColliders: 0
   _roadOutPath: []
 --- !u!1 &5743530916329658403
 GameObject:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 1
+  _showColliders: 0
   _roadOutPath: []
 --- !u!1 &6296472216949074497
 GameObject:
@@ -790,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 6296472216949074497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.612142, y: 0.10048808, z: 10.131239}
+  m_LocalPosition: {x: 3.612142, y: 0, z: 10.131239}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 1
+  _showColliders: 0
   _roadOutPath:
   - {fileID: 8532692982687228338}
 --- !u!1 &6480732629707249607
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.36666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 338cd6169a7400144b451ba6b3ba5915, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7f584892798fd6b4e954680484c6b770, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &7869812840962684135
 GameObject:
