@@ -10,7 +10,7 @@ public class RoadChunk : MonoBehaviour
 
 	public bool CheckValidSpawn(out RoadSpawn spawn)
 	{
-		if (_vehicleSpawns.Length == 0) Debug.LogWarning("No vehicle spawn found on chunk " + gameObject.name);
+		if (_vehicleSpawns.Length == 0) Debug.LogWarning("No vehicle spawn point found on chunk " + gameObject.name);
 
 		if (_chunkCurrentVehicles.Count == 0)
 		{

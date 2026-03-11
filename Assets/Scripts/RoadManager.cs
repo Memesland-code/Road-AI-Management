@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Apple;
 using Random = UnityEngine.Random;
 
 public class RoadManager : MonoBehaviour
@@ -23,6 +22,7 @@ public class RoadManager : MonoBehaviour
 		    RoadChunk spawnRoad = _roadsArray[Random.Range(0, _roadsArray.Length)].GetComponent<RoadChunk>();
 		    if (spawnRoad.CheckValidSpawn(out RoadSpawn spawn))
 		    {
+			    print(spawn.SpawnPoint.position);
 				VehicleAI vehicle = Instantiate(_vehiclePrefab, spawn.SpawnPoint.position, spawn.SpawnPoint.rotation, GameObject.FindWithTag("VehiclesContainer").transform).GetComponent<VehicleAI>();
 				vehicle.InitVehicle(spawn.Destination);
 		    }
