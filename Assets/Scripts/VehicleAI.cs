@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -5,25 +6,28 @@ public class VehicleAI : MonoBehaviour
 {
 	private NavMeshAgent _agent;
 	
-	private void Start()
+	private void Awake()
 	{
 		_agent = GetComponent<NavMeshAgent>();
 	}
 
-	public void InitVehicle(Transform destination)
+	public void InitVehicle(RoadLink destination)
 	{
-		_agent.SetDestination(destination.position);
+		_agent.destination = destination.gameObject.transform.position;
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
+		print("Collided with object " + other.name);
 		if (other.CompareTag("RoadLink"))
 		{
+			print("RoadLink found");
 			Vector3? newDestination = other.GetComponent<RoadLink>().GetRandomRoadOutPoint();
 
 			if (newDestination.HasValue)
 			{
-				_agent.SetDestination(newDestination.Value);
+				print("new destination has valid value");
+				_agent.destination = newDestination.Value;
 			}
 		}
 	}

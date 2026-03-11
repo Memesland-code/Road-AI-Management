@@ -548,11 +548,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3340a1d21236da7489b0be9f3b292363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadChunk
-  VehicleSpawns:
+  _vehicleSpawns:
   - SpawnPoint: {fileID: 2092052010971903502}
-    Destination: {fileID: 2785949214343756389}
+    ExitLinkDestination: {fileID: 4340521892498132532}
   - SpawnPoint: {fileID: 7299942613558095552}
-    Destination: {fileID: 2346481458519721186}
+    ExitLinkDestination: {fileID: 8532692982687228338}
 --- !u!1 &3325848032048494962
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,13 +959,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6819182790180443082}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -3.75, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4072822583092528267}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &7089594684875340457
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,9 +4,9 @@ using Random = UnityEngine.Random;
 
 public class RoadChunk : MonoBehaviour
 {
-	private RoadSpawn[] _vehicleSpawns;
+	[SerializeField] private RoadSpawn[] _vehicleSpawns;
 
-	private List<VehicleAI> _chunkCurrentVehicles;
+	private List<VehicleAI> _chunkCurrentVehicles = new List<VehicleAI>();
 
 	public bool CheckValidSpawn(out RoadSpawn spawn)
 	{
