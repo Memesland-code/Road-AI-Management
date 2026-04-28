@@ -4,18 +4,23 @@ using Random = UnityEngine.Random;
 
 public class RoadChunk : MonoBehaviour
 {
-	[SerializeField] private RoadSpawn[] _vehicleSpawns;
+	[SerializeField] private RoadSpawn[] vehicleSpawns;
 
-	private List<VehicleAI> _chunkCurrentVehicles = new List<VehicleAI>();
+	private List<VehicleAI> chunkCurrentVehicles = new List<VehicleAI>();
 
 	public bool CheckValidSpawn(out RoadSpawn spawn)
 	{
-		if (_vehicleSpawns.Length == 0) Debug.LogWarning("No vehicle spawn point found on chunk " + gameObject.name);
-
-		if (_chunkCurrentVehicles.Count == 0)
+		if (vehicleSpawns.Length == 0)
 		{
-			int spawnIndex = Random.Range(0, _vehicleSpawns.Length);
-			spawn = _vehicleSpawns[spawnIndex];
+			Debug.LogWarning("No vehicle spawn point found on chunk " + gameObject.name + " at location " + gameObject.transform.position);
+			spawn = null;
+			return false;
+		}
+		
+		if (chunkCurrentVehicles.Count == 0)
+		{
+			int spawnIndex = Random.Range(0, vehicleSpawns.Length);
+			spawn = vehicleSpawns[spawnIndex];
 			return true;
 		}
 		
@@ -25,6 +30,6 @@ public class RoadChunk : MonoBehaviour
 	
 	public void RegisterVehicleInChunk(VehicleAI vehicle)
 	{
-		_chunkCurrentVehicles.Add(vehicle);
+		chunkCurrentVehicles.Add(vehicle);
 	}
 }

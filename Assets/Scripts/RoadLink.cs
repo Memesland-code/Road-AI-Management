@@ -4,14 +4,14 @@ using Random = UnityEngine.Random;
 
 public class RoadLink : MonoBehaviour
 {
-	[SerializeField] private bool _showColliders;
-	[SerializeField] private List<RoadLink> _roadOutPath = new List<RoadLink>();
+	[SerializeField] private bool showColliders;
+	[SerializeField] private List<RoadLink> roadOutPath = new List<RoadLink>();
 
 	public Vector3? GetRandomRoadOutPoint()
 	{
-		if (_roadOutPath.Count > 0)
+		if (roadOutPath.Count > 0)
 		{
-			RoadLink selectedOutRoadLink = _roadOutPath[Random.Range(0, _roadOutPath.Count)];
+			RoadLink selectedOutRoadLink = roadOutPath[Random.Range(0, roadOutPath.Count)];
 			return selectedOutRoadLink.gameObject.transform.position;
 		}
 
@@ -20,7 +20,7 @@ public class RoadLink : MonoBehaviour
 	
 	private void OnDrawGizmos()
 	{
-		if (_showColliders)
+		if (showColliders)
 			Gizmos.DrawWireCube(transform.position, new Vector3(3.5f, 7.5f, 3.5f));
 		
 		Gizmos.color = Color.green;

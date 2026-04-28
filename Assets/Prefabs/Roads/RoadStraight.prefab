@@ -162,7 +162,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.75, y: 0, z: 0}
-  m_LocalScale: {x: 0.32462, y: 1, z: 2}
+  m_LocalScale: {x: 0.35, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7415230203950269361}
@@ -272,8 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 0
-  _roadOutPath:
+  showColliders: 0
+  roadOutPath:
   - {fileID: 4340521892498132532}
 --- !u!1 &2414102141926197893
 GameObject:
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3340a1d21236da7489b0be9f3b292363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadChunk
-  _vehicleSpawns:
+  vehicleSpawns:
   - SpawnPoint: {fileID: 2092052010971903502}
     ExitLinkDestination: {fileID: 4340521892498132532}
   - SpawnPoint: {fileID: 7299942613558095552}
@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 0
-  _roadOutPath: []
+  showColliders: 0
+  roadOutPath: []
 --- !u!1 &5743530916329658403
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,8 +762,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 0
-  _roadOutPath: []
+  showColliders: 0
+  roadOutPath: []
 --- !u!1 &6296472216949074497
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +790,7 @@ Transform:
   m_GameObject: {fileID: 6296472216949074497}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.612142, y: 0, z: 10.131239}
+  m_LocalPosition: {x: 3.75, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -896,8 +896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c83261260cd9f47913628f1f747ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RoadLink
-  _showColliders: 0
-  _roadOutPath:
+  showColliders: 0
+  roadOutPath:
   - {fileID: 8532692982687228338}
 --- !u!1 &6480732629707249607
 GameObject:
@@ -994,7 +994,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.75, y: 0, z: 0}
-  m_LocalScale: {x: 0.32462, y: 1, z: 2}
+  m_LocalScale: {x: 0.35, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7415230203950269361}
@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.36666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 7f584892798fd6b4e954680484c6b770, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ef5e4f6f3356b0f44902db70d4dd6abd, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &7869812840962684135
 GameObject:

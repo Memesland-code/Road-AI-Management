@@ -4,28 +4,40 @@ using Random = UnityEngine.Random;
 
 public class RoadManager : MonoBehaviour
 {
-	[SerializeField] private GameObject _vehiclePrefab;
+	[SerializeField] private GameObject vehiclePrefab;
 	
-	private int _carSpawnNumber = 1;
-	private GameObject[] _roadsArray;
+	[SerializeField] private int vehicleSpawnNumber = 1;
+	[SerializeField] private int spawnErrorsLimit = 100;
+	private GameObject[] roadsArray;
 	
     void Start()
     {
-	    _roadsArray = GameObject.FindGameObjectsWithTag("Road");
+	    roadsArray = GameObject.FindGameObjectsWithTag("Road");
 	    InitVehicles();
     }
 
     private void InitVehicles()
     {
-	    for (int i = 0; i < _carSpawnNumber; i++)
+	    int successfullySpawned = 0;
+	    int currentSpawnErrors = 0;
+
+	    while (successfullySpawned < vehicleSpawnNumber && currentSpawnErrors < spawnErrorsLimit)
 	    {
-		    RoadChunk spawnRoad = _roadsArray[Random.Range(0, _roadsArray.Length)].GetComponent<RoadChunk>();
+		    RoadChunk spawnRoad = roadsArray[Random.Range(0, roadsArray.Length)].GetComponent<RoadChunk>();
 		    if (spawnRoad.CheckValidSpawn(out RoadSpawn spawn))
 		    {
-				VehicleAI vehicle = Instantiate(_vehiclePrefab, spawn.SpawnPoint.position, spawn.SpawnPoint.rotation, GameObject.FindWithTag("VehiclesContainer").transform).GetComponent<VehicleAI>();
-				vehicle.InitVehicle(spawn.ExitLinkDestination);
+			    VehicleAI vehicle = Instantiate(vehiclePrefab, spawn.SpawnPoint.position, spawn.SpawnPoint.rotation, GameObject.FindWithTag("VehiclesContainer").transform).GetComponent<VehicleAI>();
+			    vehicle.InitVehicle(spawn.ExitLinkDestination);
+			    successfullySpawned++;
+		    }
+		    else
+		    {
+			    currentSpawnErrors++;
 		    }
 	    }
+	    
+	    Debug.Log($"InitVehicle() finished executing!" +
+	              $"\nSpawned {successfullySpawned}/{vehicleSpawnNumber} vehicles with {currentSpawnErrors} spawn errors.");
     }
 }
 

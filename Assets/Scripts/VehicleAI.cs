@@ -3,16 +3,16 @@ using UnityEngine.AI;
 
 public class VehicleAI : MonoBehaviour
 {
-	private NavMeshAgent _agent;
+	private NavMeshAgent agent;
 	
 	private void Awake()
 	{
-		_agent = GetComponent<NavMeshAgent>();
+		agent = GetComponent<NavMeshAgent>();
 	}
 
 	public void InitVehicle(RoadLink destination)
 	{
-		_agent.destination = destination.gameObject.transform.position;
+		agent.destination = destination.gameObject.transform.position;
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -23,7 +23,7 @@ public class VehicleAI : MonoBehaviour
 
 			if (newDestination.HasValue)
 			{
-				_agent.destination = newDestination.Value;
+				agent.destination = newDestination.Value;
 			}
 		}
 	}
